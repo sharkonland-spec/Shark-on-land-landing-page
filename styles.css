@@ -1,0 +1,135 @@
+:root {
+  --bg:#000000;
+  --text:#f5f5f7;
+  --muted:#b3b3b8;
+  --accent:#FF0000;        /* primary red accent */
+  --accent-dark:#870000;   /* deep red for hover/shadow */
+}
+/* Base */
+body {
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+.section{width:100%}
+.full-img{width:100%;height:auto;display:block}
+.container{max-width:800px;margin:0 auto;padding:20px;text-align:center}
+.logo{max-height:80px;margin:20px auto}
+
+/* Signup card */
+.signup-box {
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:16px;
+  padding:24px;
+  margin:20px auto;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.form-title {
+  font-size:1.8rem;
+  margin-bottom:1rem;
+  color:var(--text);
+  letter-spacing:.5px;
+}
+.signup-form {
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-bottom:1rem;
+}
+.signup-form input {
+  padding:12px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.06);
+  color:#fff;
+}
+.signup-form button {
+  padding:12px;
+  background:var(--accent);
+  border:none;
+  border-radius:8px;
+  color:#fff;
+  cursor:pointer;
+  box-shadow:0 6px 18px rgba(255,0,0,.25);
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+.signup-form button:hover { filter:brightness(1.05); }
+.signup-form button:active { background:var(--accent-dark); }
+
+.form-perks {
+  margin-top:1rem;
+  font-size:0.9rem;
+  color:var(--muted);
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.form-perks p {
+  margin:.2rem 0;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;
+  padding:.35rem .6rem;
+}
+
+/* Victory / success takeover */
+.form-status {
+  margin-top: 1.2rem;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 1.2;
+  display:none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 18px rgba(255,0,0,.22));
+}
+.signup-box.success .signup-form,
+.signup-box.success .form-perks,
+.signup-box.success .form-title { display:none; }
+.signup-box.success .form-status { display:block; animation:pop .45s ease-out both; }
+
+@keyframes pop {
+  0% { transform: scale(.96); opacity:.1; }
+  60% { transform: scale(1.03); opacity:1; }
+  100% { transform: scale(1); }
+}
+
+/* Music Gate */
+.audio-gate {
+  position:fixed;
+  inset:0;
+  display:grid;
+  place-items:center;
+  background:rgba(0,0,0,.7);
+  backdrop-filter:blur(6px);
+  z-index:9999;
+}
+.audio-gate__inner {
+  padding:20px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:14px;
+  text-align:center;
+}
+.sound-toggle {
+  position:fixed;
+  right:14px;
+  bottom:14px;
+  border:none;
+  border-radius:50%;
+  padding:.6rem .8rem;
+  background:rgba(255,255,255,.1);
+  color:#fff;
+  cursor:pointer;
+  z-index:9998;
+}
+.site-footer { text-align:center;padding:20px;color:var(--muted); }

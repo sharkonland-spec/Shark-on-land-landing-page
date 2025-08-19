@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Shark On Land — Official Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Background Music -->
+  <audio id="bg-audio" preload="auto" loop>
+    <source src="assets/audio/Shark-On-Land-Music.wav" type="audio/wav">
+  </audio>
+
+  <div id="audio-gate" class="audio-gate">
+    <div class="audio-gate__inner">
+      <p>tap to enter • sound on 🔊</p>
+      <button id="audio-cta" class="btn btn--primary">Dive In</button>
+    </div>
+  </div>
+
+  <button id="sound-toggle" class="sound-toggle" aria-pressed="false">🔊</button>
+
+  <!-- Signup Section -->
+  <section class="section section--signup">
+    <div class="container">
+      <img src="assets/images/logo.png" alt="Shark On Land Logo" class="logo">
+
+      <div class="signup-box">
+        <h2 class="form-title">Sign up for Shark Pack</h2>
+        <form id="lead-form" class="signup-form" action="https://formspree.io/f/xjkoqywe" method="POST">
+          <input type="text" name="name" placeholder="Name (e.g. Great White)" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <button type="submit" class="btn btn--primary">Sign Up For The Shark Pack</button>
+        </form>
+
+        <div class="form-perks">
+          <p>EXCLUSIVE EVENTS</p>
+          <p>72H EARLY ACCESS</p>
+          <p>FREE ITEMS</p>
+          <p>RAFFLE ENTRIES</p>
+        </div>
+
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Sections -->
+  <section class="section"><img src="assets/images/section-1.jpg" class="full-img" alt=""></section>
+  <section class="section"><img src="assets/images/section-2.jpg" class="full-img" alt=""></section>
+  <section class="section"><img src="assets/images/section-3.jpg" class="full-img" alt=""></section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Shark On Land. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
